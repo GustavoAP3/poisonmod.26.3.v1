@@ -1,13 +1,7 @@
 {
-  "itemGroup.poisonmod": "Example Mod Tab",
-  "block.poisonmod.example_block": "Example Block",
-  "item.poisonmod.example_item": "Example Item",
-
-  "poisonmod.configuration.title": "PoisonMod Configs",
-  "poisonmod.configuration.section.poisonmod.common.toml": "PoisonMod Configs",
-  "poisonmod.configuration.section.poisonmod.common.toml.title": "PoisonMod Configs",
-  "poisonmod.configuration.items": "Item List",
-  "poisonmod.configuration.logDirtBlock": "Log Dirt Block",
-  "poisonmod.configuration.magicNumberIntroduction": "Magic Number Text",
-  "poisonmod.configuration.magicNumber": "Magic Number"
+  "item.poisonmod.azurita": "Azurita",
+  "item.poisonmod.p_powder": "P-Powder",
+  "item.poisonmod.raw_azurita": "Raw Azurita",
+  "creativetab.poisonmod.items": "Poison Mod Items",
+  "creativetab.poisonmod.blocks": "PoisonMod Blocks"
 }
