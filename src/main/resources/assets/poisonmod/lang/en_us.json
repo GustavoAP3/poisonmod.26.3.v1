@@ -1,6 +1,14 @@
 {
   "item.poisonmod.azurita": "Azurita",
   "item.poisonmod.p_powder": "P-Powder",
+
+  "block.poisonmod.azurita_block": "Block of Azurita",
+  "block.poisonmod.azurita_deepslate_ore": "Azurita Deepslate Ore",
+  "block.poisonmod.azurita_end_ore": "Azurita End Ore",
+  "block.poisonmod.azurita_nether_ore": "Azurita Nether Ore",
+  "block.poisonmod.azurita_ore": "Azurita Ore",
+  "block.poisonmod.raw_azurita_block": "Raw Azurita Block",
+
   "item.poisonmod.raw_azurita": "Raw Azurita",
   "creativetab.poisonmod.items": "Poison Mod Items",
   "creativetab.poisonmod.blocks": "PoisonMod Blocks"

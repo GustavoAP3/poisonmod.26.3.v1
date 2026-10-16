@@ -8,6 +8,7 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.poison.poisonmod.PoisonMod;
+import net.poison.poisonmod.block.ModBlocks;
 import net.poison.poisonmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -28,9 +29,15 @@ public class ModCreativeModeTabs {
 
 
     public static final Supplier<CreativeModeTab> BLOCKS_TAB = CREATIVE_MODE_TABS.register("blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.AZURITA.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.AZURITA_BLOCK.get()))
                     .title(Component.translatable("creativetab.poisonmod.blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.AZURITA_BLOCK);
+                        output.accept(ModBlocks.AZURITA_DEEPSLATE_ORE);
+                        output.accept(ModBlocks.AZURITA_END_ORE);
+                        output.accept(ModBlocks.AZURITA_NETHER_ORE);
+                        output.accept(ModBlocks.AZURITA_ORE);
+                        output.accept(ModBlocks.RAW_AZURITA_BLOCK);
 
                     }).build());
 

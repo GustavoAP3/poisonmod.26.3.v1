@@ -1,5 +1,6 @@
 package net.poison.poisonmod;
 
+import net.poison.poisonmod.block.ModBlocks;
 import net.poison.poisonmod.creativemodetab.ModCreativeModeTabs;
 import net.poison.poisonmod.item.ModItems;
 import org.slf4j.Logger;
@@ -36,6 +37,7 @@ public class PoisonMod {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (PoisonMod) to respond directly to events.
@@ -55,11 +57,17 @@ public class PoisonMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        /*if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+        /*
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.AZURITA);
             event.accept(ModItems.P_POWDER);
             event.accept(ModItems.RAW_AZURITA);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.AZURITA_BLOCK);
         }*/
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

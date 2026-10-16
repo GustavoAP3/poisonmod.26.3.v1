@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "poisonmod:block/azurita_deepslate_ore"
+  }
+}
