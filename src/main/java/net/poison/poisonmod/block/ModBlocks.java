@@ -1,7 +1,11 @@
 package net.poison.poisonmod.block;
 
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -25,8 +29,9 @@ public class ModBlocks {
             properties -> new Block(properties.strength(3f).requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
 
+    // you can use.noLoot.Table() method
     public static final DeferredBlock<Block> AZURITA_DEEPSLATE_ORE = registerBlock("azurita_deepslate_ore",
-            properties -> new Block(properties.strength(3f).requiresCorrectToolForDrops()
+            properties -> new Block(properties.strength(4f).requiresCorrectToolForDrops()
                     .sound(SoundType.DEEPSLATE)));
 
     public static final DeferredBlock<Block> AZURITA_END_ORE = registerBlock("azurita_end_ore",
@@ -34,7 +39,7 @@ public class ModBlocks {
                     .sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> AZURITA_NETHER_ORE = registerBlock("azurita_nether_ore",
-            properties -> new Block(properties.strength(3f).requiresCorrectToolForDrops()
+            properties -> new DropExperienceBlock(UniformInt.of(2, 4), properties.strength(3f).requiresCorrectToolForDrops()
                     .sound(SoundType.NETHER_ORE)));
 
     public static final DeferredBlock<Block> RAW_AZURITA_BLOCK = registerBlock("raw_azurita_block",
@@ -42,6 +47,9 @@ public class ModBlocks {
                     .sound(SoundType.IRON)));
 
 
+    public static ResourceKey<Block> getRK(Block block){
+        return BuiltInRegistries.BLOCK.getResourceKey(block).get();
+    }
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function){
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);
